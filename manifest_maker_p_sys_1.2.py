@@ -1,11 +1,13 @@
 import pandas as pd
 from itertools import repeat
 import sys
-
+#downloaded list from SRA run selector
 SRA_acc = sys.argv[1]
+#path of dumped fastqs (advise the --split command from sratoolkit)
 path = sys.argv[2]
-suffix1 = sys.argv[3]
-suffix2 = sys.argv[3]
+#suffix of fastq files (e.g are they zipped?)
+suffix = sys.argv[3]
+#location of manifest file
 file_loc = sys.argv[4]
 #create df
 df = pd.read_csv
